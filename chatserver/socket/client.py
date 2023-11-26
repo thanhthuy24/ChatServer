@@ -30,8 +30,8 @@ try:
         msg = input("Talk: ")
         # gửi lệnh đi
         client.sendall(msg.encode(FORMAT))
-        #msg = client.recv(1024).decode(FORMAT)
-        #print("Server response: ", msg)
+        msg = client.recv(1024).decode(FORMAT)
+        print("Server response: ", msg)
 
         if (msg == "list"):
             # wait response
